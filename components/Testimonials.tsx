@@ -76,31 +76,30 @@ export default function Testimonials() {
               What people say after they land.
             </h2>
           </div>
-          {/* Arrow Buttons - visible on mobile */}
-          <div className="flex items-center gap-2 md:hidden">
-            <button
-              onClick={() => scroll("left")}
-              aria-label="Previous testimonial"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/10 bg-white text-navy hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors shadow-sm"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-4.5 w-4.5">
-                <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              aria-label="Next testimonial"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/10 bg-white text-navy hover:bg-terracotta hover:text-white hover:border-terracotta transition-colors shadow-sm"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-4.5 w-4.5">
-                <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-          </div>
         </div>
 
         {/* Mobile: Horizontal scroll */}
         <div className="relative mt-14 overflow-hidden md:hidden">
+          {/* Arrow Buttons - positioned on the carousel */}
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Previous testimonial"
+            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-terracotta/30 bg-white/90 text-navy backdrop-blur-sm transition-colors hover:bg-terracotta hover:text-white hover:border-terracotta shadow-lg"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5">
+              <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Next testimonial"
+            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-terracotta/30 bg-white/90 text-navy backdrop-blur-sm transition-colors hover:bg-terracotta hover:text-white hover:border-terracotta shadow-lg"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5">
+              <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
           <div
             ref={scrollContainerRef}
             onMouseEnter={() => setIsHovered(true)}

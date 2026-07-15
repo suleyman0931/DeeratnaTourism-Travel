@@ -107,39 +107,36 @@ export default function Destinations() {
               Popular destinations
             </h2>
           </div>
-          <div className="flex items-center gap-6">
-            <a
-              href="#booking"
-              className="font-body text-sm font-semibold text-gold underline-offset-4 hover:underline"
-            >
-              Plan a custom route →
-            </a>
-            {/* Arrow Buttons - visible on mobile */}
-            <div className="flex items-center gap-2 lg:hidden">
-              <button
-                onClick={() => scroll("left")}
-                aria-label="Previous destination"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/20 bg-navy-dark/70 text-gold hover:bg-gold hover:text-navy-dark hover:border-gold transition-colors shadow-sm backdrop-blur"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-4.5 w-4.5">
-                  <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                aria-label="Next destination"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/20 bg-navy-dark/70 text-gold hover:bg-gold hover:text-navy-dark hover:border-gold transition-colors shadow-sm backdrop-blur"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-4.5 w-4.5">
-                  <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          <a
+            href="#booking"
+            className="font-body text-sm font-semibold text-gold underline-offset-4 hover:underline"
+          >
+            Plan a custom route →
+          </a>
         </div>
 
         {/* Mobile: Horizontal scroll */}
         <div className="relative mt-12 overflow-hidden lg:hidden">
+          {/* Arrow Buttons - positioned on the carousel */}
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Previous destination"
+            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gold/30 bg-navy-dark/80 text-gold backdrop-blur-sm transition-colors hover:bg-gold hover:text-navy-dark hover:border-gold shadow-lg"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5">
+              <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Next destination"
+            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gold/30 bg-navy-dark/80 text-gold backdrop-blur-sm transition-colors hover:bg-gold hover:text-navy-dark hover:border-gold shadow-lg"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5">
+              <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
           <div
             ref={scrollContainerRef}
             onMouseEnter={() => setIsHovered(true)}

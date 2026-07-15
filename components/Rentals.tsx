@@ -102,38 +102,35 @@ export default function Rentals() {
               platform in between.
             </p>
           </div>
-          <div className="flex items-center gap-6">
-            <a
-              href="#booking"
-              className="font-body text-sm font-semibold text-terracotta underline-offset-4 hover:underline"
-            >
-              Enquire about a property →
-            </a>
-            {/* Arrow Buttons */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => scroll("left")}
-                aria-label="Previous property"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/10 bg-white text-navy hover:bg-gold hover:text-navy-dark hover:border-gold transition-colors shadow-sm"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-4.5 w-4.5">
-                  <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                aria-label="Next property"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/10 bg-white text-navy hover:bg-gold hover:text-navy-dark hover:border-gold transition-colors shadow-sm"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-4.5 w-4.5">
-                  <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          <a
+            href="#booking"
+            className="font-body text-sm font-semibold text-terracotta underline-offset-4 hover:underline"
+          >
+            Enquire about a property →
+          </a>
         </div>
 
         <div className="relative mt-12 overflow-hidden">
+          {/* Arrow Buttons - positioned on the carousel */}
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Previous property"
+            className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gold/30 bg-white/90 text-navy backdrop-blur-sm transition-colors hover:bg-gold hover:text-navy-dark hover:border-gold shadow-lg md:left-4"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5">
+              <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Next property"
+            className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gold/30 bg-white/90 text-navy backdrop-blur-sm transition-colors hover:bg-gold hover:text-navy-dark hover:border-gold shadow-lg md:right-4"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5">
+              <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
           <div
             ref={scrollContainerRef}
             onMouseEnter={() => setIsHovered(true)}

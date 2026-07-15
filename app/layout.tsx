@@ -35,11 +35,17 @@ export const metadata: Metadata = {
     "Umrah packages",
     "Addis Ababa tour operator",
   ],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: "Deeratna Tourism and Travel",
     description:
       "Flights, hotels, tour packages and Umrah/visa assistance — booked with a trusted partner connecting Ethiopia to the world.",
     type: "website",
+    images: ['/logo-full.png'],
   },
 };
 
