@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -9,6 +11,21 @@ export default function Hero() {
       {/* Horn of Africa route map + animated flight path (signature element) */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(27,63,115,0.55),transparent_60%)]" />
+        
+        {/* Dubai Image - positioned on the right side */}
+        <div className="absolute right-0 top-0 hidden h-full w-1/2 md:block">
+          <div className="relative h-full w-full opacity-20">
+            <Image
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop"
+              alt="Dubai Skyline"
+              fill
+              className="object-cover object-right"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-navy-dark/40 to-navy-dark" />
+          </div>
+        </div>
+        
         <svg
           className="absolute right-[-8%] top-10 h-[420px] w-[420px] opacity-[0.35] md:h-[560px] md:w-[560px]"
           viewBox="0 0 200 200"
