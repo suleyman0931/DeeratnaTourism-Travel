@@ -111,11 +111,24 @@ export default function BookingForm() {
 
         <label className="block">
           <span className="mb-1.5 block font-mono text-[11px] uppercase tracking-widest text-navy/60">
-            Phone or email
+            Phone number
           </span>
           <input
             required
+            type="tel"
             placeholder="+251 9xx xxx xxx"
+            className="w-full rounded-lg border border-navy/15 px-3.5 py-3 font-body text-sm text-ink outline-none focus:border-gold"
+          />
+        </label>
+
+        <label className="block md:col-span-2">
+          <span className="mb-1.5 block font-mono text-[11px] uppercase tracking-widest text-navy/60">
+            Email address
+          </span>
+          <input
+            required
+            type="email"
+            placeholder="your.email@example.com"
             className="w-full rounded-lg border border-navy/15 px-3.5 py-3 font-body text-sm text-ink outline-none focus:border-gold"
           />
         </label>
