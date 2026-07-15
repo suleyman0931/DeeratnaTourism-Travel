@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F6F1E7;
+  color: #0B1A33;
+}
+
+::selection {
+  background-color: #C99A3E;
+  color: #0B1A33;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #C99A3E;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Departures board split-flap glyph */
+.flap {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.board-row {
+  border-bottom: 1px solid rgba(246, 241, 231, 0.08);
+}
+
+.route-dashline {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(201, 154, 62, 0.6) 0,
+    rgba(201, 154, 62, 0.6) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  height: 1px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
