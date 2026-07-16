@@ -14,15 +14,15 @@ export default function Hero() {
         
         {/* Dubai Image - positioned on the right side */}
         <div className="absolute right-0 top-0 hidden h-full w-1/2 md:block">
-          <div className="relative h-full w-full opacity-20">
+          <div className="relative h-full w-full opacity-30">
             <Image
               src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop"
               alt="Dubai Skyline"
               fill
-              className="object-cover object-right"
+              className="object-cover object-right brightness-110"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-navy-dark/40 to-navy-dark" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-navy-dark/30 to-navy-dark" />
           </div>
         </div>
         
@@ -98,7 +98,7 @@ export default function Hero() {
             <circle cx="950" cy="40" r="5" fill="#F6F1E7" opacity="0.9" />
 
             {/* Origin label - bottom left */}
-            <text x="70" y="505" fill="#F6F1E7" fontSize="12" fontWeight="700" fontFamily="var(--font-jetbrains)" opacity="0.9">
+            <text x="70" y="470" fill="#F6F1E7" fontSize="12" fontWeight="700" fontFamily="var(--font-jetbrains)" opacity="0.9">
               ADD
             </text>
 
